@@ -19,7 +19,7 @@
     "noFallthroughCasesInSwitch": false,
     "paths": {
         "@aurora/*": ["src/@aurora/*"],
-        "@apps/*": ["src/@aurora/*"],
+        "@apps/*": ["src/@apps/*"],
         "@api/*": ["src/@api/*"]
     }
   }
