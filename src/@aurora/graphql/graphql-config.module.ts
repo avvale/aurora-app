@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 import GraphQLJSON from 'graphql-type-json';
-import { Any, Json, Upload } from 'aurora-ts-core';
+import { AnyScalar, JsonScalar, UploadScalar } from 'aurora-ts-core';
 import { Hello } from './hello.resolver';
 
 @Module({
@@ -25,9 +25,9 @@ import { Hello } from './hello.resolver';
         })
     ],
     providers: [
-        Any,
-        Upload,
-        Json,
+        AnyScalar,
+        UploadScalar,
+        JsonScalar,
         Hello
     ],
     exports: [
