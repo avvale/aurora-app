@@ -1,12 +1,13 @@
 import { Module } from '@nestjs/common';
-import { CorePreparationRequestController } from 'aurora-ts-core';
+import { CorePreparationRequestController, SequelizeConfigModule } from 'aurora-ts-core';
 import { SharedModule } from './shared.module';
 import { GraphQLConfigModule } from './graphql/graphql-config.module';
 
 @Module({
     imports: [
         SharedModule,
-        GraphQLConfigModule
+        GraphQLConfigModule,
+        SequelizeConfigModule,
     ],
     controllers: [
         CorePreparationRequestController
