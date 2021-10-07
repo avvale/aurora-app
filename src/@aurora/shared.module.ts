@@ -26,7 +26,19 @@ import { CoreModule as AuroraCoreModule, ICriteria, SequelizeCriteria } from 'au
     ],
     exports: [
         ConfigModule,
-        CqrsModule
+        CqrsModule,
+        {
+            provide : ICommandBus,
+            useClass: NestCommandBus
+        },
+        {
+            provide : IQueryBus,
+            useClass: NestQueryBus
+        },
+        {
+            provide : ICriteria,
+            useClass: SequelizeCriteria
+        }
     ]
 })
 export class SharedModule {}
