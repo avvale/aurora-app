@@ -6,8 +6,8 @@ import { CoreModule as AuroraCoreModule, ICriteria, SequelizeCriteria } from 'au
 
 @Module({
     imports: [
-        ConfigModule.forRoot({ isGlobal: true }),
         AuroraCoreModule,
+        ConfigModule.forRoot({ isGlobal: true }),
         CqrsModule
     ],
     providers: [
